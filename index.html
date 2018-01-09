@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="./vendors/css/flexboxgrid.min.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="login" class="white row middle-xs center-xs">
+    <div class="col-xs-12">
+      <div class="box">
+        <p>Antes de entrar al chat, tienes que iniciar sesión</p>
+        <button id="start-login" class="btn btn-raised red white-text">
+          iniciar sesión con Google
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="row">
+    <div class="col-md-3 col-xs-12">
+      <div class="box">
+        <div class="indigo white-text users-js">
+          Usuarios conectados
+        </div>
+        <ul id="users" class="collection"></ul>
+      </div>
+    </div>
+    <div class="col-xs">
+      <div id="chats" class="box"></div>
+    </div>
+  </div>
+
+  <script id="hidden-template" type="text/x-custom-template">
+    <div id="${id}" class="chat">
+        <ul class="messages collection" style="height: 400px;"></ul>
+        <form class="form">
+          <input placeholder="Mensaje" type="text" class="message">
+          <input type="submit" class="btn btn-raised indigo white-text" value="Enviar">
+        </form>
+      </div>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./js/chat.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
